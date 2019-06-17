@@ -1,6 +1,6 @@
 -----------------------------------------------------------------------------------------
 | 				Nama Kelompok	: 1. Muhammad Yusuf Abdurrohman	(17.11.1039) 			|
-|								  2. Syekh Arpi Ageng (17.11.1052)						|
+|						  2. Syekh Arpi Ageng (17.11.1052)			        |
 -----------------------------------------------------------------------------------------
 1. a. Api : - API Al-Qur'an Murotal = bit.ly/linkquranapi,
 		 	- API Jadwal Sholat Khusus Daerah DI Yogyakarta = bit.ly/linkjadwalsholatapi.
