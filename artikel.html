@@ -3,32 +3,35 @@
 	<head>
 		<title>eslame</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="src/css/artikel.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="shortcut icon" href="src/img/favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="src/css/jadwal.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<header>
 			<div class="head" style="width: 100%; height: 26px;">
-			<p style="color: white;"><marquee>Selamat datang :) , disini teman-teman dapat menikmati fitur-fitur keislaman yang telah disediakan seperti Al-Qur'an Murotal & Keterangannya, Jadwal Sholat dan Artikel Keislaman</marquee></p>
+				<p style="color: white;"><marquee>Selamat datang :) , disini teman-teman dapat menikmati fitur-fitur keislaman yang telah disediakan seperti Al-Qur'an Murotal & Keterangannya, Jadwal Sholat dan Artikel Keislaman</marquee></p>
 			</div>
 		</header>
 		<nav class="navbar scrolled sticky-top navbar-expand-lg navbar-light shadow-sm" id="mnavbar">
 			<div class="container">
-				<a class="navbar-brand" href="jadwal-sholat.html">eslame</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-				</button>
-				<form class="form-contol mx-auto" style="width: 300px;">
-					<input class="search input" type="text" placeholder="Cari Artikel">
-				</form>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-					<div id="men" class="navbar-nav p-1">
-						<a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-						<a class="nav-item nav-link" href="Quran.html">Al-Qur'an</a>
-						<a id="pry" class="nav-item nav-link aktif" style="color: #fff" href="jadwal-sholat.html">Jadwal Sholat</a>
-						<div class="btn-group">
-					  <a style="cursor: pointer;" id="drop" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<a class="navbar-brand" href="artikel.html">eslame</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<form class="form-contol mx-auto" style="width: 300px;">
+				<input id="search" class="search input" type="text" placeholder="Cari Artikel">
+			</form>
+			<div id="update"></div>
+            <br>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+				<div id="men" class="navbar-nav p-1">
+					<a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" href="Quran.html">Al-Qur'an</a>
+					<a class="nav-item nav-link" href="jadwal-sholat.html">Jadwal Sholat</a>
+					<div class="btn-group">
+					  <a style="cursor: pointer; color:#fff;" id="drop" class="nav-item nav-link dropdown-toggle aktif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					    Artikel
 					  </a>
 					  <div class="dropdown-menu">
@@ -39,43 +42,59 @@
 					    <a id="Ramadhan" class="dropdown-item" href="#">Ramadhan</a>
 					  </div>
 					</div>
-						<a class="nav-item nav-link" href="about.html">About</a>
-					</div>
+					<a class="nav-item nav-link" href="about.html">About</a>
 				</div>
+			</div>
 			</div>
 		</nav>
 
 		<section class="title text-center mt-4">
-      		<h2><a href="jadwal-sholat.html">Jadwal Sholat</a></h2>
-    	</section>
+			<h2><a href="artikel.html">eslame</a></h2>
+		</section>
 
-		<!-- Output -->
+		<section class="content mx-auto p-1 mb-5">
+			<div class="isi-konten">
+				<div class="container">
+					<div class="leet mx-auto">
+						<p>Temukan Artikel yang menarik.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<div class="container">
-			<div class="row">
-				<div id="jadwal" class="col">
-					
-				</div>
+			<div class="row" id="daftar-artikel">
+				
+
 			</div>
 		</div>
-		<!--Modal-->
-		</button>
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	<!-- Modal -->
+
+	<nav aria-label="...">
+		  <ul class="pagination justify-content-center mt-5 p-3" style="margin-bottom: -55px">
+		    <li class="page-item">
+		      <a class="page-link" href="artikel.html" tabindex="-1"><</a>
+		    </li>
+		    <li class="page-item active"><a class="page-link" href="artikel.html">1</a></li>
+		    <li class="page-item">
+		      <a class="page-link" href="artikel.html">2 <span class="sr-only">(current)</span></a>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="artikel.html">3</a></li>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="artikel.html">4</a></li>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="artikel.html">5</a></li>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="artikel.html">...</a></li>
+			</li>
+			</li>
+		    <li class="page-item"><a class="page-link" href="artikel.html">20</a></li>
+		     <li class="page-item">
+		      <a class="page-link" href="artikel.html">></a>
+		    </li>
+		  </ul>
+	</nav>
+				
+		<!-- Modal -->
 <div class="modal fade" id="ModalAPI" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -124,37 +143,5 @@
 	src="https://code.jquery.com/jquery-3.4.1.js"
 	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 	crossorigin="anonymous"></script>
-	<script src="js/jadwal-sholat.js"></script>
-	<script>
-    $(document).ready(function() {
-        $(window).scroll(function() {
-          if($(this).scrollTop() > 80) { 
-              $('#mnavbar').addClass('solid');
-          } else {
-              $('#mnavbar').removeClass('solid');
-          }
-        });
-	});
-  </script>
-  <script type="text/javascript">
-		$(document).on('click', '#sholat', function(e){ 
-		    e.preventDefault(); 
-		    var url = $(this).attr('href'); 
-		    window.open(url, 'http://bit.ly/linkjadwalsholatapi');
-		});
-	</script>
-	<script type="text/javascript">
-		$(document).on('click', '#quran', function(e){ 
-		    e.preventDefault(); 
-		    var url = $(this).attr('href'); 
-		    window.open(url, 'http://bit.ly/linkquranapi');
-		});
-	</script>
-	<script type="text/javascript">
-		$(document).on('click', '#contactus', function(e){ 
-		    e.preventDefault(); 
-		    var url = $(this).attr('href'); 
-		    window.open(url, '_blank');
-		});
-	</script>
+	<script src="js/artikel.js"></script>
 </html>

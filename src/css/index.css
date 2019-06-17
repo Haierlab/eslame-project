@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@media (min-width: 360px) {
+body{
+background-color: #fff;
+background-image: url('https://desktop.github.com/images/star-bg.svg');
+background-position: 50% 0px, 0px 0px;
+}#logo a{
+text-decoration: none;
+color: black;
+font-size: 48px;
+font-weight: 500;
+font-family: 'Dosis', sans-serif;
+}.dec a {
+color: black;
+padding-right: 10px;
+text-decoration: none solid #ffff;
+}.dec a:hover{
+color: #1E88E5;
+}.container h1 {
+color: white;
+}.container p {
+color: white;
+}#formGroupExampleInput{
+width: 50%;
+}
+.input {
+        width: 100%;
+        padding: 12px 24px; 
+
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        
+        color: #575756;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 10px 10px;
+        background-position: 95% center;
+        border: 0px solid #575756;
+        border-bottom: 1px solid #575756;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;  
+    }
+ 
+        .input::placeholder {
+            color: color(#575756 a(0.8));
+            letter-spacing: 1.5px;
+        }
+        
+
+.input:hover,
+       .input:focus {
+            padding: 12px 0;
+            outline: 0;
+            border-bottom: 1px solid #575756;
+            border-radius: 0;
+            background-position: 100% center;
+        }
+        
+
+.input:hover,
+       .input:focus {
+            padding: 12px 0;
+            outline: 0;
+            border-bottom: 1px solid #575756;
+            border-radius: 0;
+            background-position: 100% center;
+        }
+
+#men a:hover{
+	background-color: #0277BD;
+	color: #fff;
+	transition: 0.4s;
+  padding: 8px 8px;
+}
+
+#men a{
+	color: black;
+}
+
+.title h2 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 60px;
+	text-decoration: none;
+	color: black;
+  transition: 0.4s;
+}
+
+@media (min-width: 360px) {
+.content {
+	margin-top: 35px;
+	padding: 0 auto;
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
+	text-align: justify;
+	height: 143px;
+
+}
+
+.content p {
+	padding: 15px;
+	color: black;
+	text-align: justify;
+}
+
+.content .tex {
+	padding: 0 0 20px;
+}
+}
+.card-a img {
+	margin-top: 12px;
+	width: 90px;
+	height: 90px;
+}
+
+.card-a p {
+	color: black;
+}
+
+.head {
+	background-color: #0277BD;
+}
+
+.title a {
+	text-decoration: none;
+	color: black;
+}.title a:hover {
+	color: #0277BD;
+  transition: 0.4s;
+}
+
+.solid {
+  background-color: rgb(0, 0, 0, 0.6);
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+  }
+
+  .modal-body a {
+    text-decoration: none;
+    color: #0277BD;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .modal-body a:hover{
+    color: #000;
+    transition: 0.4s;
+  }
+  .leet {
+  margin-top: 50px;
+  background-color: #0277BD;
+  box-shadow: 0 0 0 1px rgb(0, 10, 0, 0.10);
+  border-radius: 10px;
+}
+.leet p {
+  color: #fff;
+  text-align: center;
+}
+
+.footer-basic-centered{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font: normal 18px sans-serif;
+
+  padding: 45px;
+  margin-top: 80px;
+}
+
+.footer-basic-centered .footer-company-motto{
+  color:  #fff;
+  font-size: 20px;
+  margin: 0;
+  cursor: default;
+}
+
+.footer-basic-centered .footer-company-name{
+  color:  #fff;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-basic-centered .footer-links{
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  color:  #ffffff;
+  padding: 35px 0 23px;
+  margin: 0;
+}
+
+.footer-basic-centered .footer-links a{
+  display:inline-block;
+  text-decoration: none;
+  padding: 5px;
+  color: inherit;
+}
+
+.footer-basic-centered .footer-links a:hover {
+  color: #0277BD;
+  transition: 0.5s;
+}
+
+#link {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+
+  .footer-basic-centered{
+    padding: 35px;
+  }
+
+  .footer-basic-centered .footer-company-motto{
+    font-size: 18px;
+  }
+
+  .footer-basic-centered .footer-company-name{
+    font-size: 12px;
+  }
+
+  .footer-basic-centered .footer-links{
+    font-size: 14px;
+    padding: 25px 0 20px;
+  }
+
+  .footer-basic-centered .footer-links a{
+    line-height: 1.8;
+  }
+
+  .card-a {
+    margin-top: 50px;  
+  }
+}
+
+.bs-callout p {
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.aktif {
+  background-color: #0277BD;
+}
+
+.deaktif {
+  background-color: #0277BD;
+  opacity: 0.5;
+}
