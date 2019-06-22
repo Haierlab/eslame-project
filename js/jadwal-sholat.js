@@ -8,7 +8,7 @@ var settings = {
           "crossDomain": true, 
           "url": "http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc",//url API
           "method": "GET", //method GET
-          "headers": { //menjalankan header CROS
+          "headers": { //menjalankan header CORS
               "accept": "application/json",
               "Access-Control-Allow-Origin":"*"
           }
@@ -16,6 +16,7 @@ var settings = {
       //membuat fungsi ajax untuk melakukan eksekusi data request dan menjalankan variabel setting diatas
       //kemudian jika sukses menjalankan fungsi dengan parameter response
       $.ajax(settings).done(function (response) {
+        console.log(response)
      		//membuat variabel jadwal dengan menggunakan  fungsi let dan di inisialisasikan sebagai response 
         //response.items bertujuan untuk mengambil data object pada array sehingga menjadi array of object
      		let jadwal = response.items;
@@ -101,27 +102,62 @@ var clock = 0;
           //fungsi dibawah untuk memanggil class modal-body pada file html dan menampilkannya
      			$('.modal-body').html(`
      				<h5 align="center">&nbsp;Jadwal Sholat DI `+ data.state +`<br>`+ times.date_for +`</h5><hr>
-     				 <div id="mod" class="container">
-                <ul style="display:inline;">
-                  <li class="mb-1">Subuh   <span style="margin-left:31px;">:   `+times.fajr+`</span></li>
-                  <li class="mb-1">Terbit  <span style="margin-left:35px;">:   `+times.shurooq+`</span></li>
-                  <li class="mb-1">Dhuhur  <span style="margin-left:24px;">:   `+times.dhuhr+`</span></li>
-                  <li class="mb-1">Ashar   <span style="margin-left:34px;">:   `+times.asr+`</span></li>
-                  <li class="mb-1">Maghrib <span style="margin-left:17px;">:   `+times.maghrib+`</span></li>
-                  <li class="mb-1">Isha    <span style="margin-left:45px;">:   `+times.isha+`</span></li>
-                <ul>
-              </div>
-              <div class="col-md-6 ml-auto">  
-              <span>Keterangan</span>
-              <br>
-              <span>am : 12 malam - 12 siang</span><br>
-              <span>pm : 12 siang - 12 malam</span>
+     				 <div class="col-md-7 mr-auto"> 
+             <ul class="list-group">
+              <li class="list-group-item">Subuh : `+times.fajr+`</li>
+              <li class="list-group-item">Terbit  : `+times.shurooq+`</li>
+              <li class="list-group-item">Dhuhr   :`+times.dhuhr+`</li>
+              <li class="list-group-item">Ashar : `+times.asr+`</li>
+              <li class="list-group-item">Maghrib : `+times.maghrib+`</li>
+              <li class="list-group-item">Isha : `+times.isha+`</li>
+            </ul>
+            </div>
+              <div class="col-md-5 ml-auto">  
+              <p class="text-center">Keterangan</p>
+              <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item">AM : Jam 12 Malam - 12 Siang</li>
+                <li class="list-group-item">PM : Jam 12 Siang - 12 Malam</li>
+                <hr>
+              </ul>
               </div>
      			`);
 
      		})
       })	
  });
+
+ //request instagram Endpoints
+var settings = {
+          'cache': false,
+          'dataType': "jsonp",
+          "async": true,
+          "crossDomain": true,
+          "url": "https://api.instagram.com/v1/users/self/?access_token=15005923577.3bc7ce5.5bbc8170f44f42c883d32bd3b2274ae8",
+          "method": "GET",
+          "headers": {
+              "accept": "application/json",
+              "Access-Control-Allow-Origin":"*"
+          }
+      }
+
+      $.ajax(settings).done(function (data) {
+        let ig = data.data;
+        console.log(ig);
+
+        $.each(ig, function(x, y) {
+          $('#insta').html(`
+            <p class="text-white badge badge-danger">Instagram</p>
+            <div class="row justify-content-center">
+              <div class="badge badge-dark shadow-sm rounded">
+              <img class="rounded-circle" src="`+ig.profile_picture+`" alt="profile" style="width:100px; margin-top:-60px">
+              <p class="text-white mt-3 badge" style="font-size:14px;">&nbsp;<span class="ml-3">name : `+ig.full_name+`</span><br><br><span style="margin-left:40px">username : @`+ig.username+`</span><br><br><span class="ml-4">Bio : `+ig.bio+`</span></p>
+            </div>
+            </div>
+            <p class="text-white mt-3 ml-3 badge badge-primary" style="font-size:14px;">Followers : `+ig.counts.followed_by+` | Media: `+ig.counts.media+`</p>
+          `);
+
+        })
+      });
 
 //menjalankan fungsi jadwal dan jam
 $(document).ready(function() {
@@ -174,3 +210,32 @@ $('div.btn-group').hover(function() {
     }, function() {
       $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 80) { 
+              $('#mnavbar').addClass('solid');
+          } else {
+              $('#mnavbar').removeClass('solid');
+          }
+        });
+  });
+ 
+    $(document).on('click', '#sholat', function(e){ 
+        e.preventDefault(); 
+        var url = $(this).attr('href'); 
+        window.open(url, 'http://bit.ly/linkjadwalsholatapi');
+    });
+
+    $(document).on('click', '#quran', function(e){ 
+        e.preventDefault(); 
+        var url = $(this).attr('href'); 
+        window.open(url, 'http://bit.ly/linkquranapi');
+    });
+
+    $(document).on('click', '#contactus', function(e){ 
+        e.preventDefault(); 
+        var url = $(this).attr('href'); 
+        window.open(url, '_blank');
+    });
+
