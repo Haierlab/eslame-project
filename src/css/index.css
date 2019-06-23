@@ -253,3 +253,43 @@ width: 50%;
   background-color: #0277BD;
   opacity: 0.5;
 }
+
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    text-indent: 0;
+    animation: marquee 35s linear infinite;
+}
+
+.marquee span:hover {
+    animation-play-state: paused
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+.jumbotron{
+  margin-bottom: -80px;
+  background-color: #fff;
+}
+
+hr {
+display: block;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+margin-left: auto;
+margin-right: auto;
+border-style: inset;
+border-width: 1px;
+width:80%;
+}
