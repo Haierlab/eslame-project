@@ -1,17 +1,13 @@
 # eslame-project
 
-AMIKOM University of Yogyakarta Indonesia 
-
-## Getting Started
-
-This project made by our team for semester final assignments (Web Programming).
+made by students of AMIKOM University of Yogyakarta Indonesia 
 
 ## Built With
 **Framework & Library**
-* [NodeJS](https://nodejs.org/) - Framework
-* [JQuery (AJAX)](https://jquery.com/) - Library
-* [Bootstrap](https://getbootstrap.com/) - Framework
-* [FontAwesome](https://fontawesome.com/) - Framework
+* [NodeJS] (https://nodejs.org/) - Framework
+* [JQuery (AJAX)] (https://jquery.com/) - Library
+* [Bootstrap] (https://getbootstrap.com/) - Framework
+* [FontAwesome] (https://fontawesome.com/) - Framework
 
 ## API
 * [Al-Qur'an](bit.ly/linkquranapi/) - Thanks to bro **Ican Bachors**(https://github.com/bachors) - as API provider
@@ -27,4 +23,4 @@ See also the list of [contributors](https://github.com/haierlab/eslame-project/c
 
 ## License
 
-This project is licensed under the AMIKOM University License 
+This project is licensed under the AMIKOM University License.
