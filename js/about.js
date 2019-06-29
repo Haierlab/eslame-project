@@ -54,17 +54,6 @@ $('.nav-link').on('click', function (){
     $(this).addClass('aktif');
 });
 
-    $(document).on('click', '#sholat', function(e){ 
-        e.preventDefault(); 
-        var url = $(this).attr('href'); 
-        window.open(url, 'http://bit.ly/linkjadwalsholatapi');
-    });
-
-    $(document).on('click', '#quran', function(e){ 
-        e.preventDefault(); 
-        var url = $(this).attr('href'); 
-        window.open(url, 'http://bit.ly/linkquranapi');
-    });
 
     $(document).on('click', '#support', function(e){ 
         e.preventDefault(); 
@@ -88,6 +77,11 @@ $('.nav-link').on('click', function (){
         window.open(url, '_blank');
     });
     $(document).on('click', '#ig', function(e){ 
+        e.preventDefault(); 
+        var url = $(this).attr('href'); 
+        window.open(url, '_blank');
+    });
+    $(document).on('click', '#igmedia', function(e){ 
         e.preventDefault(); 
         var url = $(this).attr('href'); 
         window.open(url, '_blank');

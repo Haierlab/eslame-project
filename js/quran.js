@@ -177,6 +177,11 @@ var settings = {
         var url = $(this).attr('href'); 
         window.open(url, '_blank');
     });
+     $(document).on('click', '#igmedia', function(e){ 
+        e.preventDefault(); 
+        var url = $(this).attr('href'); 
+        window.open(url, '_blank');
+    });
 
 $('div.btn-group').hover(function() {
 		  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
