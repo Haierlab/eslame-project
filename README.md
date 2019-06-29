@@ -1,21 +1,30 @@
------------------------------------------------------------------------------------------
-| 				Nama Kelompok	: 1. Muhammad Yusuf Abdurrohman	(17.11.1039) 			|
-|						  2. Syekh Arpi Ageng (17.11.1052)			        |
------------------------------------------------------------------------------------------
-1. a. Api : - API Al-Qur'an Murotal = bit.ly/linkquranapi,
-		 	- API Jadwal Sholat Khusus Daerah DI Yogyakarta = bit.ly/linkjadwalsholatapi.
-   b. Framework & Plugin : - Bootstrap,
-						   - Jquery,
-   				           - FontAwesome untuk Font.
-   c. Sumber Artikel keislaman : Semua Diambil dari muslim.or.id, dengan menyertakan
-   								 nama penulis, tanggal, dan sumber dalam bentuk button-
-   								 (baca selengkapnya...).
-   d. Interaksi User : - Dengan menekan Support Us pada footer maka user akan diarahkan ke
-   					     Donasi atau memberikan saran atau masukkan ke Pengembang dengan 
-   					     menginputkan Nama, E-mail, saran atau pendapat atau jika berkenan 
-   					     user dapat melakukan Donasi untuk mensupport perkembangan web.
-   					   - Dengan mengklik logo medsos maka user akan diarahkan ke akun medsos
-   					     atau halaman di medsos.
-2. Desain disini kami mengutamakan tema putih, biru, dan hitam ke biruan
-3. rencana pada search akan diisi dengan live search pada data json
-_________________________________________________________________________________________
+# eslame-project
+
+AMIKOM University of Yogyakarta Indonesia 
+
+## Getting Started
+
+This project made by our team for semester final assignments (Web Programming).
+
+## Built With
+**Framework & Library**
+* [NodeJS](https://nodejs.org/) - Framework
+* [JQuery (AJAX)](https://jquery.com/) - Library
+* [Bootstrap](https://getbootstrap.com/ - Framework
+* [FontAwesome](https://fontawesome.com/) - Framework
+
+**API**
+* [Al-Qur'an](bit.ly/linkquranapi/) - Thanks to bro **Ican Bachors**(https://github.com/bachors) - as API provider
+* [Prayer Times](bit.ly/linkjadwalsholatapi/) - Thanks to **Muslim Salat**(muslimsalat.com) - as API provider
+
+## Authors
+
+* **M. Yusuf Abdurrohman** (https://instagram.com/aboutmiaw/)
+* **Ryan Nur Irwansyah** (https://instagram.com/ryirwansyah)
+* **Syekh Arpi Ageng** (https://instagram.com/brilloart99)
+
+See also the list of [contributors](https://github.com/haierlab/eslame-project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the AMIKOM University License 
