@@ -13,7 +13,7 @@ This project made by our team for semester final assignments (Web Programming).
 * [Bootstrap](https://getbootstrap.com/ - Framework
 * [FontAwesome](https://fontawesome.com/) - Framework
 
-**API**
+## API
 * [Al-Qur'an](bit.ly/linkquranapi/) - Thanks to bro **Ican Bachors**(https://github.com/bachors) - as API provider
 * [Prayer Times](bit.ly/linkjadwalsholatapi/) - Thanks to **Muslim Salat**(muslimsalat.com) - as API provider
 
