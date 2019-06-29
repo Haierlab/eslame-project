@@ -10,12 +10,12 @@ This project made by our team for semester final assignments (Web Programming).
 **Framework & Library**
 * [NodeJS](https://nodejs.org/) - Framework
 * [JQuery (AJAX)](https://jquery.com/) - Library
-* [Bootstrap](https://getbootstrap.com/ - Framework
+* [Bootstrap](https://getbootstrap.com/) - Framework
 * [FontAwesome](https://fontawesome.com/) - Framework
 
 ## API
 * [Al-Qur'an](bit.ly/linkquranapi/) - Thanks to bro **Ican Bachors**(https://github.com/bachors) - as API provider
-* [Prayer Times](bit.ly/linkjadwalsholatapi/) - Thanks to **Muslim Salat**(muslimsalat.com) - as API provider
+* [Prayer Times](bit.ly/linkjadwalsholatapi/) - Thanks to **Muslim Salat**(http://muslimsalat.com) - as API provider
 
 ## Authors
 
