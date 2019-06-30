@@ -291,3 +291,9 @@ border-style: inset;
 border-width: 1px;
 width:80%;
 }
+
+@media (min-width: 360px) {
+.bs-callout p {
+  font-size: 15px;
+}
+}

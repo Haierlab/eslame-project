@@ -1,0 +1,20 @@
+[
+	{
+		"image" : "src/img/1795989.png",
+		"title" : "Al-Qur'an",
+		"caption" : "Mendengarkan Murotal kini lebih mudah di eslame.",
+		"link" : "quran.html"
+	},
+	{
+		"image" : "src/img/julus.png",
+		"title" : "Jadwal Sholat",
+		"caption" : "Kini Sholat bisa lebih tepat waktu dengan melihat jadwal Sholat di eslame.",
+		"link" : "jadwal-sholat.html"
+	},
+	{
+		"image" : "src/img/folded-newspaper.png",
+		"title" : "Artikel",
+		"caption" : "Tambah pengetahuan tentang ilmu keislaman di eslame.",
+		"link" : "artikel.html"
+	}
+]
