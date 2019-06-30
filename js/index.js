@@ -9,7 +9,7 @@ var settings = {
           "headers": {
               "accept": "application/json",
               "Access-Control-Allow-Origin":"*"
-          }
+          } 
       }
 
       $.ajax(settings).done(function (data) {
