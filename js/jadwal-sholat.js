@@ -1,5 +1,5 @@
-function jadwal() {
-var settings = {
+//use header CORS 
+/*var settings = {
           'cache': false,
           'dataType': "jsonp", 
           "async": true,
@@ -28,6 +28,7 @@ var settings = {
                     <li id="min"></li>
                     <li id="point">:</li>
                    <li id="sec"></li>
+                   <li id="Date"></li>
                 </ul>
           </div>           
             <h5 class="blue mx-auto" style="color:#fff;">Temperatur : `+response.today_weather.temperature+`°C</h5>
@@ -46,6 +47,42 @@ var settings = {
      		`);
      		})
       });
+*/
+function jadwal() {
+jQuery(function($) {
+   $.getJSON('http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (x) {
+    $('#jadwal').append(`
+            <div class="jumbotron shadow-lg p-3 mb-5 bg-transparent mt-5 jumbotron-fluid">
+            <div class="container">
+            <h3 class="text-left" style="font-family: 'Assistant', sans-serif; font-size: 25px;"><i><img src="src/img/clock.png" width="30px" height="30px"></i>&nbsp;
+              Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 20px" align="left">DI `+ x.state +`<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
+             <div class="clock">
+             <div id="Date" class="text-center"></div>
+                <ul>
+                    <li id="hours"></li>
+                    <li id="point">:</li>
+                    <li id="min"></li>
+                    <li id="point">:</li>
+                   <li id="sec"></li>
+                   <li id="Date"></li>
+                </ul>
+          </div>           
+            <h5 class="blue mx-auto" style="color:#fff;">Temperatur : `+x.today_weather.temperature+`°C</h5>
+            </div>            
+             <hr>
+             <h1 class="text-center" style="color: #000; font-size:30px;font-family: 'Assistant', sans-serif; font-weight:600;">`+ x.items[0].fajr +`</h1>
+              <h5 class="text-center">Subuh Besok</h5>
+              <div class="col-md-6 col-lg-6 col-sm-6">
+              <h4 class="text-center countdown"> </h4>
+              </div>
+              <div class="text-right">
+              <a href="#" class="card-link target" data-toggle="modal" data-target="#exampleModal">Selengkapnya..</a>
+            </div>
+          </div>
+        </div>
+      `); 
+   });
+});
 }
 
 //fungsi untuk memanggil modal
