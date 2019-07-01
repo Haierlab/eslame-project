@@ -50,7 +50,7 @@
 */
 function jadwal() {
 jQuery(function($) {
-   $.getJSON('http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (x) {
+   $.getJSON('https://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (x) {
     $('#jadwal').append(`
             <div class="jumbotron shadow-lg p-3 mb-5 bg-transparent mt-5 jumbotron-fluid">
             <div class="container">
@@ -88,7 +88,7 @@ jQuery(function($) {
 function detail() {
 jQuery(function($) {
   $('#jadwal').on('click', '.target', function() {
-   $.getJSON('http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (y) {
+   $.getJSON('https://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (y) {
     $('.modal-body').html(`
             <h5 align="center">&nbsp;Jadwal Sholat DI `+ y.state +`<br>`+ y.items[0].date_for +`</h5><hr>
              <div class="col-md-7 mr-auto"> 
