@@ -1,5 +1,6 @@
 //use header CORS 
-/*var settings = {
+function jadwal() {
+var settings = {
           'cache': false,
           'dataType': "jsonp", 
           "async": true,
@@ -47,8 +48,9 @@
      		`);
      		})
       });
-*/
-function jadwal() {
+    }
+
+/*function jadwal() {
 jQuery(function($) {
    $.getJSON('http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (x) {
     $('#jadwal').append(`
@@ -114,7 +116,7 @@ jQuery(function($) {
       })
     })
 }
-
+*/
 //Digital Clock Plugin with jQuery CSS3
 function time() {
 $(document).ready(function() {
@@ -180,7 +182,7 @@ var settings = {
 
 $(document).ready(function() {
 	jadwal();
-  modaljadwal();
+  //modaljadwal();
   time();
   ig();
 });
