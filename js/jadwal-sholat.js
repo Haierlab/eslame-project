@@ -84,7 +84,7 @@ jQuery(function($) {
    });
 });
 }
-/*
+
 function modaljadwal() {
 jQuery(function($) {
   $('#jadwal').on('click', '.target', function() {
@@ -114,7 +114,7 @@ jQuery(function($) {
       })
     })
 }
-*/
+
 //Digital Clock Plugin with jQuery CSS3
 function time() {
 $(document).ready(function() {
