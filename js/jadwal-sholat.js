@@ -85,38 +85,20 @@ jQuery(function($) {
 });
 }
 
-//fungsi untuk memanggil modal
 function modaljadwal() {
- $('#jadwal').on('click', '.target', function() {
-
- 	var settings = {
-          'cache': false,
-          'dataType': "jsonp",
-          "async": true,
-          "crossDomain": true,
-          "url": "http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc",
-          "method": "GET",
-          "headers": {
-              "accept": "application/json",
-              "Access-Control-Allow-Origin":"*"
-          }
-      }
-
-      $.ajax(settings).done(function (data) {
-     		let waktu = data.items;
-
-     		$.each(waktu, function(i, times) {
-          //fungsi dibawah untuk memanggil class modal-body pada file html dan menampilkannya
-     			$('.modal-body').html(`
-     				<h5 align="center">&nbsp;Jadwal Sholat DI `+ data.state +`<br>`+ times.date_for +`</h5><hr>
-     				 <div class="col-md-7 mr-auto"> 
+jQuery(function($) {
+  $('#jadwal').on('click', '.target', function() {
+   $.getJSON('http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (y) {
+    $('.modal-body').html(`
+            <h5 align="center">&nbsp;Jadwal Sholat DI `+ y.state +`<br>`+ y.items[0].date_for +`</h5><hr>
+             <div class="col-md-7 mr-auto"> 
               <div class="list-group tx">
-                <p type="text" class="list-group-item list-group-item-action">Subuh : `+times.fajr+`</p>
-                <p type="text" class="list-group-item list-group-item-action">Terbit  : `+times.shurooq+`</p>
-                <p type="text" class="list-group-item list-group-item-action">Dhuhr   :`+times.dhuhr+`</p>
-                <p type="text" class="list-group-item list-group-item-action">Ashar : `+times.asr+`</p>
-                <p type="text" class="list-group-item list-group-item-action">Maghrib : `+times.maghrib+`</p>
-                <p type="text" class="list-group-item list-group-item-action">Isha : `+times.isha+`</p>
+                <p type="text" class="list-group-item list-group-item-action">Subuh : `+y.items[0].fajr+`</p>
+                <p type="text" class="list-group-item list-group-item-action">Terbit  : `+y.items[0].shurooq+`</p>
+                <p type="text" class="list-group-item list-group-item-action">Dhuhr   :`+y.items[0].dhuhr+`</p>
+                <p type="text" class="list-group-item list-group-item-action">Ashar : `+y.items[0].asr+`</p>
+                <p type="text" class="list-group-item list-group-item-action">Maghrib : `+y.items[0].maghrib+`</p>
+                <p type="text" class="list-group-item list-group-item-action">Isha : `+y.items[0].isha+`</p>
               </div>
              </div>
               <div class="col-md-5 ml-auto">  
@@ -127,11 +109,10 @@ function modaljadwal() {
                 <hr>
               </div>
               
-     			`);
-
-     		})
-      })	
- });
+          `);
+        })
+      })
+    })
 }
 
 //Digital Clock Plugin with jQuery CSS3
