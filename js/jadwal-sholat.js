@@ -85,7 +85,7 @@ jQuery(function($) {
 });
 }
 
-function modaljadwal() {
+function detail() {
 jQuery(function($) {
   $('#jadwal').on('click', '.target', function() {
    $.getJSON('http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (y) {
@@ -180,7 +180,7 @@ var settings = {
 
 $(document).ready(function() {
 	jadwal();
-  modaljadwal();
+  detail();
   time();
   ig();
 });
