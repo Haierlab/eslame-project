@@ -31,27 +31,6 @@ var settings = {
         })
       });
 
-$(document).ready(function () {
-  var url = "json/landing.json";
-  
-  $.getJSON(url, function (e) {
-    $.each(e, function (x, y) {
-      $('#konten').append(`
-        <div class="card mx-auto mb-3 d-inline-flex" style="width: 20rem;">
-          <img src="`+y.image+`" alt="icon" class="mx-auto mt-3" style="width:120px; height:120px;">
-            <div class="card-body">
-              <h6 class="card-title">`+ y.title +`</h6>
-                <hr>
-                <span>`+y.caption+`</span>
-                <hr>
-                <a href="`+y.link+`" class="btn btn-primary" target="_blank">Selengkapnya..</a>
-              </div>
-          </div>
-        `);
-    })
-  });   
-});
-
  	$(document).ready(function() {
         $(window).scroll(function() {
           if($(this).scrollTop() > 80) { 
