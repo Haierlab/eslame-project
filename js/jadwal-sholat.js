@@ -1,6 +1,5 @@
 //use header CORS 
-function jadwal() {
-var settings = {
+/*var settings = {
           'cache': false,
           'dataType': "jsonp", 
           "async": true,
@@ -48,9 +47,8 @@ var settings = {
      		`);
      		})
       });
-    }
-
-/*function jadwal() {
+*/
+function jadwal() {
 jQuery(function($) {
    $.getJSON('http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (x) {
     $('#jadwal').append(`
@@ -86,7 +84,7 @@ jQuery(function($) {
    });
 });
 }
-
+/*
 function modaljadwal() {
 jQuery(function($) {
   $('#jadwal').on('click', '.target', function() {
@@ -182,7 +180,7 @@ var settings = {
 
 $(document).ready(function() {
 	jadwal();
-  //modaljadwal();
+  modaljadwal();
   time();
   ig();
 });
