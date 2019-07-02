@@ -1,70 +1,20 @@
-//use header CORS 
-/*var settings = {
-          'cache': false,
-          'dataType': "jsonp", 
-          "async": true,
-          "crossDomain": true, 
-          "url": "http://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc",//url API
-          "method": "GET", 
-          "headers": { 
-              "accept": "application/json",
-              "Access-Control-Allow-Origin":"*"
-          }
-      }
-      $.ajax(settings).done(function (response) {
-        console.log(response)
-     		let jadwal = response.items;
-     		$.each(jadwal, function(i, time) {
-     			$('#jadwal').append(`
-     				<div class="jumbotron shadow-lg p-3 mb-5 bg-transparent mt-5 jumbotron-fluid">
-					  <div class="container">
-            <h3 class="text-left" style="font-family: 'Assistant', sans-serif; font-size: 25px;"><i><img src="src/img/clock.png" width="30px" height="30px"></i>&nbsp;
-              Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 20px" align="left">DI `+ response.state +`<br><span style="margin-left:38px;">`+ time.date_for +`</span></span></h3>
-             <div class="clock">
-             <div id="Date" class="text-center"></div>
-                <ul>
-                    <li id="hours"></li>
-                    <li id="point">:</li>
-                    <li id="min"></li>
-                    <li id="point">:</li>
-                   <li id="sec"></li>
-                   <li id="Date"></li>
-                </ul>
-          </div>           
-            <h5 class="blue mx-auto" style="color:#fff;">Temperatur : `+response.today_weather.temperature+`°C</h5>
-            </div>				    
-             <hr>
-             <h1 class="text-center" style="color: #000; font-size:30px;font-family: 'Assistant', sans-serif; font-weight:600;">`+ time.fajr +`</h1>
-					    <h5 class="text-center">Subuh Besok</h5>
-              <div class="col-md-6 col-lg-6 col-sm-6">
-              <h4 class="text-center countdown"> </h4>
-              </div>
-					    <div class="text-right">
-					    <a href="#" class="card-link target" data-toggle="modal" data-target="#exampleModal">Selengkapnya..</a>
-					  </div>
-					  </div>
-					</div>
-     		`);
-     		})
-      });
-*/
 function jadwal() {
 jQuery(function($) {
    $.getJSON('https://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (x) {
     $('#jadwal').append(`
-            <div class="jumbotron shadow-lg p-3 mb-5 bg-transparent mt-5 jumbotron-fluid">
-            <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-transparent mt-5">
+            <div class="container" id="logo-jam">
             <h3 class="text-left" style="font-family: 'Assistant', sans-serif; font-size: 25px;"><i><img src="src/img/clock.png" width="30px" height="30px"></i>&nbsp;
               Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 20px" align="left">DI `+ x.state +`<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
-             <div class="clock">
-             <div id="Date" class="text-center"></div>
+             <div class="clock mx-auto">
+                <h5 id="Date"></h5>
                 <ul>
                     <li id="hours"></li>
                     <li id="point">:</li>
                     <li id="min"></li>
                     <li id="point">:</li>
-                   <li id="sec"></li>
-                   <li id="Date"></li>
+                    <li id="sec"></li>
+                    <li id="Date"></li>
                 </ul>
           </div>           
             <h5 class="blue mx-auto" style="color:#fff;">Temperatur : `+x.today_weather.temperature+`°C</h5>
@@ -115,7 +65,7 @@ jQuery(function($) {
     })
 }
 
-//Digital Clock Plugin with jQuery CSS3
+//Digital Clock Plugin with jQuery CSS3 "http://www.alessioatzeni.com/blog/css3-digital-clock-with-jquery/"
 function time() {
 $(document).ready(function() {
 var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
