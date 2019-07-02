@@ -23,4 +23,4 @@ See also the list of [contributors](https://github.com/haierlab/eslame-project/c
 
 ## License
 
-This project is licensed under the AMIKOM University License.
+This project is licensed under the AMIKOM University & MIT License.
