@@ -6,7 +6,7 @@ jQuery(function($) {
             <div class="container" id="logo-jam">
             <h3 class="text-left" style="font-family: 'Assistant', sans-serif; font-size: 25px;"><i><img src="src/img/clock.png" width="30px" height="30px"></i>&nbsp;
               Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 20px" align="left">DI `+ x.state +`<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
-             <div class="clock mx-auto">
+             <div class="clock text-center mx-auto">
                 <h5 id="Date"></h5>
                 <ul>
                     <li id="hours"></li>
@@ -17,7 +17,6 @@ jQuery(function($) {
                     <li id="Date"></li>
                 </ul>
           </div>           
-            <h5 class="blue mx-auto" style="color:#fff;">Temperatur : `+x.today_weather.temperature+`°C</h5>
             </div>            
              <hr>
              <h1 class="text-center" style="color: #000; font-size:30px;font-family: 'Assistant', sans-serif; font-weight:600;">`+ x.items[0].fajr +`</h1>
