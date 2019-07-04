@@ -1,4 +1,3 @@
-/*menggunakan JQuery dan menggunakan Ajax dalam request data berupa object yang terdapat pada file json*/ 
 $(document).ready(function (){
 	//membuat variable url yang diarahkan ke folder dan file json
 	var url = 'json/artikel.json';
