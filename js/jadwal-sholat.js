@@ -25,7 +25,7 @@ function jadwal() {
             <div class="container" id="logo-jam">
             <h3 class="text-left" style="font-family: 'Assistant', sans-serif; font-size: 25px;"><i><img src="src/img/clock.png" width="30px" height="30px"></i>&nbsp;
               Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 20px" align="left">di `+ x.query +`<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
-             <div class="mx-auto bg-transparent shadow-sm text-center">
+             <div class="mx-auto bg-transparent text-center">
                 <ul class="mb-3">
                     <li id="hours"></li>
                     <li id="point">:</li>
@@ -34,6 +34,7 @@ function jadwal() {
                     <li id="sec"></li>
                     <li id="Date"></li>
                 </ul>
+                <hr>
           </div>           
             </div>            
              <h1 class="text-center" style="color: #000; font-size:30px;font-family: 'Assistant', sans-serif; font-weight:600;">`+ x.items[0].fajr +`</h1>
