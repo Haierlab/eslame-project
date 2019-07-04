@@ -83,7 +83,7 @@ function detail() {
    $.getJSON(url1+a+url2, function (y) {
     console.log(y)
     $('.modal-body').html(`
-            <h5 align="center">&nbsp;Jadwal Sholat DI `+y.query+`<br>`+ y.items[0].date_for +`</h5><hr>
+            <h5 align="center">&nbsp;Jadwal Sholat untuk wilayah `+y.query+` dan sekitarnya<br>`+ y.items[0].date_for +`</h5><hr>
              <div class="col-md-7 mr-auto"> 
               <div class="list-group tx">
                 <p type="text" class="list-group-item list-group-item-action">Subuh : `+y.items[0].fajr+`</p>
