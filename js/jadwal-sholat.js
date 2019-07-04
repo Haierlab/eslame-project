@@ -27,7 +27,7 @@ function jadwal() {
               Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 22px" align="left">`+ x.query +` dan sekitarnya.<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
              <div class="mx-auto bg-transparent text-center">
                 <ul class="mb-3">
-                    <li id="hours"></li>
+                    <li id="hours"></li> 
                     <li id="point">:</li>
                     <li id="min"></li>
                     <li id="point">:</li>
