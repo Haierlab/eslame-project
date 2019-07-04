@@ -1,14 +1,32 @@
+//fungsi jadwal
 function jadwal() {
-jQuery(function($) {
-   $.getJSON('https://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (x) {
-    $('#jadwal').append(`
-            <div class="shadow-lg p-3 mb-5 bg-transparent mt-5">
+  //menjalankan jquery pada saat kita klik id pilih dan pada kelas pilih
+  $('#pilih').on('click','.pilih', function () {
+    //var a sebagai variabel baru untuk menampung semua data pada kondisi diatas
+    var a = $(this).val();
+    //kemudian var url1 bertujuan untuk link 1 
+    var url1 = "https://muslimsalat.com/";
+    //dan var url2 bertujuan untuk link tambahan 
+    var url2 = ".json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?";
+    //melakukan request api
+  jQuery(function($) {
+    /*
+     kita lihat diatas dimana terdapat 3 variabel baru yang mana url1 merupakan url awal kemudian 
+     kita tambahkan variabel a yang mana variabel tersebut menampung data berupa variabel dari html
+     contoh: pada element select(option) terdapat misal yogyakarta,bandung dll. nah variabel ini 
+     berfungsi untuk menampung data tersebut sehingga kita tambahkan url2 untuk melengkapi link 
+     request api dimana link tersebut akan berubah sewaktu kita merubah lokasi kota pada menu select
+     di html.
+    */
+   $.getJSON(url1+a+url2, function (x) {
+    //dibawah kita menambahkan tampilan di html
+    $('#jadwal').html(`
+            <div class="shadow-lg p-3 mb-5 bg-transparent mt-3">
             <div class="container" id="logo-jam">
             <h3 class="text-left" style="font-family: 'Assistant', sans-serif; font-size: 25px;"><i><img src="src/img/clock.png" width="30px" height="30px"></i>&nbsp;
-              Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 20px" align="left">DI `+ x.state +`<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
-             <div class="clock text-center mx-auto">
-                <h5 id="Date"></h5>
-                <ul>
+              Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 20px" align="left">di `+ x.query +`<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
+             <div class="mx-auto bg-transparent shadow-sm text-center">
+                <ul class="mb-3">
                     <li id="hours"></li>
                     <li id="point">:</li>
                     <li id="min"></li>
@@ -18,28 +36,53 @@ jQuery(function($) {
                 </ul>
           </div>           
             </div>            
-             <hr>
              <h1 class="text-center" style="color: #000; font-size:30px;font-family: 'Assistant', sans-serif; font-weight:600;">`+ x.items[0].fajr +`</h1>
               <h5 class="text-center">Subuh Besok</h5>
               <div class="col-md-6 col-lg-6 col-sm-6">
               <h4 class="text-center countdown"> </h4>
               </div>
               <div class="text-right">
-              <a href="#" class="card-link target" data-toggle="modal" data-target="#exampleModal">Selengkapnya..</a>
+              <a href="#" class="card-link target"data-toggle="modal" data-target="#exampleModal" data-id="`+a+`">Selengkapnya..</a>
             </div>
           </div>
         </div>
       `); 
    });
+ });
 });
 }
+/*
+  catatan untuk x.items[0] itu maksudnya kita menjalankan parameter x kemudian kita masuk ke json 
+  dengan menambah .items[0] artinya kita masuk ke array of object untuk mengambil ataupun menampilkan
+  data ke html.
+  pada <a href="#" class="card-link target"data-toggle="modal" data-target="#exampleModal" 
+  data-id="`+a+`">Selengkapnya..</a>
 
+  itu terdapat data-id="`+a+`", maksudnya kita menambah variabel a yang mana variabel tersebut terdapat
+  value dari element select pada html. 
+*/
+
+//fungsu detail
 function detail() {
-jQuery(function($) {
-  $('#jadwal').on('click', '.target', function() {
-   $.getJSON('https://muslimsalat.com/yogyakarta.json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?', function (y) {
+  /*
+    dibawah sama seperti diatas
+  */
+  $('#jadwal').on('click', '.target','.pilih', function() {
+    console.log($(this).data('id'))
+    /*
+      var a berbeda dengan var a diatas karena kita sudah memasukkan atau menampung data-id="`+a+`"
+      kedalam var a dengan penulisan $(this).data('id') maksudnya jika kita mengklik link a
+      maka kita juga mengambil value nya, nah value nya kan sudah diisi dengan var a diatas maka 
+      link a sudah memliki value yang sesuai dengan element select pada html
+    */
+    var a = $(this).data('id');
+    jQuery(function($) {
+    var url1 = "https://muslimsalat.com/";
+    var url2 = ".json?key=bd099c5825cbedb9aa934e255a81a5fc&jsoncallback=?";
+   $.getJSON(url1+a+url2, function (y) {
+    console.log(y)
     $('.modal-body').html(`
-            <h5 align="center">&nbsp;Jadwal Sholat DI `+ y.state +`<br>`+ y.items[0].date_for +`</h5><hr>
+            <h5 align="center">&nbsp;Jadwal Sholat DI `+y.query+`<br>`+ y.items[0].date_for +`</h5><hr>
              <div class="col-md-7 mr-auto"> 
               <div class="list-group tx">
                 <p type="text" class="list-group-item list-group-item-action">Subuh : `+y.items[0].fajr+`</p>
@@ -60,8 +103,8 @@ jQuery(function($) {
               
           `);
         })
-      })
-    })
+      });
+    });
 }
 
 //Digital Clock Plugin with jQuery CSS3 "http://www.alessioatzeni.com/blog/css3-digital-clock-with-jquery/"
@@ -93,6 +136,7 @@ setInterval( function() {
 
  //request instagram Endpoints
  function ig() {
+//request ig api menggunakan header CORS dengan tipe jsonp
 var settings = {
           'cache': false,
           'dataType': "jsonp",

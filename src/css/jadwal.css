@@ -399,10 +399,9 @@ width: 55%;
 
 .clock {width:350px; margin:0 auto; padding:15px; margin-bottom:15px; }
 
-#Date { font-family: 'Roboto', sans-serif; font-size:36px; text-align:center; text-shadow:0 0 5px #00c6ff; }
 
-ul { width:300px; margin:0 auto; padding:0px; list-style:none; text-align:center; }
-ul li { display:inline; font-size:55px; text-align:center; font-family: 'Roboto', sans-serif; text-shadow:0 0 5px #00c6ff; }
+ul { width:300px; margin:0 auto; padding:0px; list-style:none;}
+ul li { display:inline; font-size:55px; text-align:center; font-family: 'Roboto', sans-serif; text-shadow:0 0 5px #00c6ff; position: relative; }
 
 #point { position:relative; -moz-animation:mymove 1s ease infinite; -webkit-animation:mymove 1s ease infinite; padding-left:10px; padding-right:10px; }
 
@@ -424,4 +423,7 @@ ul li { display:inline; font-size:55px; text-align:center; font-family: 'Roboto'
 .tx p{
   font-size: 15px;
   font-weight: 700;
+}
+.x{
+  width: 35%;
 }

@@ -1,5 +1,6 @@
 [
         {
+            "nomor" : "1",
             "kategori": "Fatwa Ulama & Fiqih Dan Muamalah",
             "penulis": "dr. Raehanul Bahraen",
             "nama": "Hukum Mencium Tangan Dan Kaki Orang Tua",
@@ -10,6 +11,7 @@
             "author_link": "https://muslim.or.id/author/raehan"
         },
         {
+            "nomor" : "2",
             "kategori": "Nasehat",
             "penulis": "M. Saifudin Hakim",
             "nama": "Metode Dakwah kepada Orang Kafir",
@@ -20,6 +22,7 @@
             "author_link": "https://muslim.or.id/author/saifudinhakim"
         },
         {
+            "nomor" : "3",
             "kategori": "Akhlaq dan Nasehat",
             "penulis": "M. Saifudin Hakim",
             "nama": "Sampaikanlah Dariku, Walaupun Satu Ayat",
@@ -30,6 +33,7 @@
             "author_link": "https://muslim.or.id/author/saifudinhakim"
         },
         {
+            "nomor" : "4",
             "kategori": "Keluarga",
             "penulis": "M. Saifudin Hakim",
             "nama": "Memprioritaskan Dakwah kepada Keluarga Terdekat",
@@ -40,6 +44,7 @@
             "author_link": "https://muslim.or.id/author/saifudinhakim"
         },
         {
+            "nomor" : "5",
             "kategori": "Aqidah",
             "penulis": "dr. Raehanul Bahraen",
             "nama": "Tidak Boleh Sujud Kepada Manusia dan Selain Manusia",
@@ -50,6 +55,7 @@
             "author_link": "https://muslim.or.id/author/raehan"
         },
         {
+            "nomor" : "6",
             "kategori": "Akhlaq dan Nasehat",
             "penulis": "Yulian Purnama",
             "nama": "Beberapa Bentuk Bakti Kepada Orang Tua Baca selengkapnya",
@@ -60,6 +66,7 @@
             "author_link": "https://muslim.or.id/author/yulian-purnama-s-kom"
         },
         {
+            "nomor" : "7",
             "kategori": "Akhlaq dan Nasehat",
             "penulis": "Yulian Purnama",
             "nama": "Perintah Untuk Birrul Walidain",
@@ -70,6 +77,7 @@
             "author_link": "https://muslim.or.id/author/yulian-purnama-s-kom"
         },
         {
+            "nomor" : "8",
             "kategori": "Ramadhan",
             "penulis": "M. Saifudin Hakim",
             "nama": "Tetap Rajin Ibadah Meskipun di Luar Ramadhan",
@@ -80,6 +88,7 @@
             "author_link": "https://muslim.or.id/author/saifudinhakim"
         },
         {
+            "nomor" : "9",
             "kategori": "Akhlaq dan Nasehat",
             "penulis": "M. Saifudin Hakim",
             "nama": "Hanya Ada Waktu-Waktu Sisa untuk Belajar Ilmu Agama",
@@ -90,6 +99,7 @@
             "author_link": "https://muslim.or.id/author/saifudinhakim"
         },
         {
+            "nomor" : "10",
             "kategori": "Akhlaq dan Nasehat",
             "penulis": "M. Saifudin Hakim",
             "nama": "Memprioritaskan Akhlak kepada Allah",
@@ -99,6 +109,7 @@
             "sumber": "https://muslim.or.id/46861-memprioritaskan-akhlak-kepada-allah.html",
             "author_link": "https://muslim.or.id/author/saifudinhakim"
         },{
+            "nomor" : "11",
             "kategori": "Akhlaq dan Nasehat",
             "penulis": "M. Saifudin Hakim",
             "nama": "Meraih Surga dan Menjauh dari Neraka dengan Ilmu Syar’i",
@@ -109,6 +120,7 @@
             "author_link": "https://muslim.or.id/author/saifudinhakim"
         },
         {
+            "nomor" : "12",
             "kategori": "Akhlaq dan Nasehat",
             "penulis": "M. Saifudin Hakim",
             "nama": "Meraih Kebaikan dan Kebahagiaan dengan Ilmu Syar’i",

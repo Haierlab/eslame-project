@@ -27,7 +27,7 @@ $(document).ready(function (){
 								<p style="margin-top:-11px; margin-bottom:7px;"><span class="badge badge-primary" style="cursor:default;font-family: 'Roboto', sans-serif; color:#fff; 
 								font-size:13px; font-weight:500;">`+ artikel.kategori +`</span></p>
 								<p class="card-text" style="color:#000; font-size: 13px; font-family: 'Roboto', sans-serif;">`+ artikel.deskripsi +`</p>
-								<a id="sumber" href="`+ artikel.sumber +`" class="btn btn-primary" style="margin-left:33px; margin-top:10px;">Baca Selengkapnya..</a>
+								<a id="sumber" href="#" class="btn btn-primary detail" style="margin-left:33px; margin-top:10px;" data-id="`+artikel.nomor+`">Baca Selengkapnya..</a>
 							</div>
 						</div>
 					`);
@@ -64,7 +64,7 @@ function daftar() {
 								<p style="margin-top:-11px; margin-bottom:7px;"><span class="badge badge-primary" style="cursor:default;font-family: 'Roboto', sans-serif; color:#fff; 
 								font-size:13px; font-weight:500;">`+ artikel.kategori +`</span></p>
 								<p class="card-text" style="color:#000; font-size: 13px; font-family: 'Roboto', sans-serif;">`+ artikel.deskripsi +`</p>
-								<a id="sumber" href="`+ artikel.sumber +`" class="btn btn-primary" style="margin-left:33px; margin-top:10px;">Baca Selengkapnya..</a>
+								<a href="`+ artikel.sumber +`" target="_blank" class="btn btn-primary" style="margin-left:33px; margin-top:10px;">Baca Selengkapnya..</a>
 							</div>
 						</div>
 					`);
@@ -106,36 +106,11 @@ var settings = {
         })
       });
 
-//pagination 
-function prevPage() {
-    debugger;
-    if (page === 1) {
-        page = Math.ceil($('.page-link #daftar-artikel').length/pageSize);
-    } else {
-        page--;
-    }
-    console.log(page);
-    showPage(page);
-}
 
-function nextPage() {
-    if (page == Math.ceil($('..page-link #daftar-artikel').length/pageSize)) {
-        page = 1;
-    } else {
-        page++;
-    }
-    showPage(page);
-}
 
 //dibawah ini bertujuan untuk menampilkan new tab baru sesuai sumber link yang tertera pada file JSON 
 //yang diintegrasikan melalui fungsi atau perintah GET data pada file JSON diatas
 function click() {
-$(document).on('click', '#sumber', function(e){
-	e.preventDefault();
-	var url = $(this).attr('href');
-	window.open(url, '_blank');
-});
-
 $(document).on('click', '#author', function(e){
 	e.preventDefault();
 	var url = $(this).attr('href');
