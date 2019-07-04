@@ -24,7 +24,7 @@ function jadwal() {
             <div class="shadow-lg p-3 mb-5 bg-transparent mt-3">
             <div class="container" id="logo-jam">
             <h3 class="text-left" style="font-family: 'Assistant', sans-serif; font-size: 25px;"><i><img src="src/img/clock.png" width="30px" height="30px"></i>&nbsp;
-              Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 20px" align="left">di `+ x.query +`<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
+              Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 22px" align="left">`+ x.query +` dan sekitarnya.<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
              <div class="mx-auto bg-transparent text-center">
                 <ul class="mb-3">
                     <li id="hours"></li>
