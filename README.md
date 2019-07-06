@@ -65,4 +65,4 @@ See also the list of [contributors](https://github.com/haierlab/eslame-project/c
 
 ## License
 
-This project is licensed under the [AMIKOM University](http://amikom.ac.id/) & [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE].
+This project is licensed under the [AMIKOM University](http://amikom.ac.id/).
