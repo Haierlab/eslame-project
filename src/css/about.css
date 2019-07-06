@@ -408,3 +408,26 @@ width: 55%;
     0%   { transform: translate(0, 0); }
     100% { transform: translate(-100%, 0); }
 }
+
+.jumbotron ol li a{
+  text-decoration: none;
+  color: #000;
+}
+.jumbotron ol li a:hover{
+  color: #0277BD;
+  transition: 0.3s;
+}
+
+.jumbotron ul li {
+  display: inline;
+  padding: 40px;
+}
+.jumbotron ul li a{
+  font-size: 4vh;
+}
+
+@media(min-width: 400px){
+.jumbotron ul li {
+  margin-left: -35px;
+}
+}
