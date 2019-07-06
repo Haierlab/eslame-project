@@ -15,18 +15,23 @@ made by students of AMIKOM University of Yogyakarta Indonesia
   - fix Qur'an murotal
 
  #### [1.0.2.2] - 28/06/2019
-  - now you can know surah overview and mean of surah
+  - now you can know of surah overview and mean of surah and more
   
   #### [1.0.3] - 29/06/2019
-  - add article and instamedia with plugin
+  - add article
+  - add instamedia with plugin
   - add jadwal sholat (prayer times)
   - make responsive content with bootstrap framework
   
-  #### [1.1.0] - 06/07/2019
+  #### [1.1.0] - 05/07/2019
+  - remove instamedia plugin
+  
+  #### [1.1.1] - 06/07/2019
   - rebuild all page make more responsive
   - add selected location on jadwal sholat (prayer times)
   - add date and time on jadwal sholat
   - add instagram endpoint on footer
+  - add jquery clock plugin on jadwal sholat 
   - rebuild instamedia with @eslame.id instagram API
   - fix lagging when open in smartphone 
   
