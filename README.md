@@ -42,8 +42,7 @@ made by students of AMIKOM University of Yogyakarta Indonesia
   
 ## Built With
 **Framework & Library**
-* [NodeJS](https://nodejs.org/) - Framework
-* [JQuery (AJAX)](https://jquery.com/) - Library
+* [JQuery (AJAX)](https://jquery.com/) - Framework
 * [Bootstrap](https://getbootstrap.com/) - Framework
 * [FontAwesome](https://fontawesome.com/) - Framework
 
