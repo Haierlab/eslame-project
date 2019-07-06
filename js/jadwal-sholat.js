@@ -2,6 +2,7 @@
 function jadwal() {
   //menjalankan jquery pada saat kita klik id pilih dan pada kelas pilih
   $('#pilih').on('click','.pilih', function () {
+    console.log($(this).val())
     //var a sebagai variabel baru untuk menampung semua data pada kondisi diatas
     var a = $(this).val();
     //kemudian var url1 bertujuan untuk link 1 
@@ -24,7 +25,7 @@ function jadwal() {
             <div class="shadow-lg p-3 mb-5 bg-transparent mt-3">
             <div class="container" id="logo-jam">
             <h3 class="text-left" style="font-family: 'Assistant', sans-serif; font-size: 25px;"><i><img src="src/img/clock.png" width="30px" height="30px"></i>&nbsp;
-              Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 22px" align="left">`+ x.query +` dan sekitarnya.<br><span style="margin-left:38px;">`+ x.items[0].date_for +`</span></span></h3>
+              Jadwal Sholat untuk wilayah<br><span style="margin-left:38px;margin-top:-20px;font-size: 18px" align="left">`+ x.query +` dan sekitarnya.<br></span></h3>
              <div class="mx-auto bg-transparent text-center">
                 <ul class="mb-3">
                     <li id="hours"></li> 
@@ -83,7 +84,8 @@ function detail() {
    $.getJSON(url1+a+url2, function (y) {
     console.log(y)
     $('.modal-body').html(`
-            <h5 align="center">&nbsp;Jadwal Sholat untuk wilayah `+y.query+` dan sekitarnya<br>`+ y.items[0].date_for +`</h5><hr>
+            <h5 class="text-center">&nbsp;Jadwal Sholat untuk wilayah `+y.query+` dan sekitarny</h5>
+            <hr>
              <div class="col-md-7 mr-auto"> 
               <div class="list-group tx">
                 <p type="text" class="list-group-item list-group-item-action">Subuh : `+y.items[0].fajr+`</p>
@@ -135,6 +137,25 @@ setInterval( function() {
 });
 }
 
+function date() {
+  //var get hari dan bulan
+  var hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+  var bulan = ['Januari', 'Februari', 'Maret', 'April', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+  //membuar variabel baru dengan mengambil hari, tanggal, bulan lokal
+  var tanggal = new Date().getDate();
+  var day = new Date().getDay();
+  var month = new Date().getMonth();
+  var year = new Date().getYear();
+  //menampung hasil variabel diatas
+  var hari = hari[day];
+  var bulan = bulan[month];
+  var tahun = (year < 1000) ? year + 1900 : year;
+  //menginisialisasikan semua variabel diatas ke dalam 1 variabel yaitu gettanggal
+  var gettanggal = 'Hari dan Tanggal : '+hari +', '+ tanggal +' '+bulan+' '+tahun+' ';
+  //menampilkan tanggal ke html
+  $('#date').html(gettanggal);
+}
+
  //request instagram Endpoints
  function ig() {
 //request ig api menggunakan header CORS dengan tipe jsonp
@@ -177,6 +198,7 @@ $(document).ready(function() {
   detail();
   time();
   ig();
+  date();
 });
 
 $(document).on('click', '#link-artikel', function(e){ 
