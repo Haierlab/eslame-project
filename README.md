@@ -52,8 +52,8 @@ made by students of AMIKOM University of Yogyakarta Indonesia
 * [FontAwesome](https://fontawesome.com/) - Framework
 
 ## API
-* [Al-Qur'an](bit.ly/linkquranapi/) - Thanks to bro **Ican Bachors(https://github.com/bachors)** - as API provider
-* [Prayer Times](bit.ly/linkjadwalsholatapi/) - Thanks to **Muslim Salat(http://muslimsalat.com)** - as API provider
+* [Al-Qur'an](bit.ly/linkquranapi/) - Thanks to bro **[Ican Bachors](https://github.com/bachors)** - as API provider
+* [Prayer Times](bit.ly/linkjadwalsholatapi/) - Thanks to **[Muslim Salat](http://muslimsalat.com)** - as API provider
 
 ## Authors
 
