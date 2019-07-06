@@ -428,6 +428,6 @@ width: 55%;
 
 @media(min-width: 320px){
 .jumbotron ul li {
-  margin-left: -52px;
+  margin-left: -50px;
 }
 }
