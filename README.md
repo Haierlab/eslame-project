@@ -27,7 +27,7 @@ made by students of AMIKOM University of Yogyakarta Indonesia
   - add date and time on jadwal sholat
   - remove instamedia plugin
   - remake article content
-  - make responsive
+  - fix layout
   
   #### [1.1.1] - 06/07/2019
   - rebuild all page make more responsive
@@ -40,7 +40,7 @@ made by students of AMIKOM University of Yogyakarta Indonesia
   #### [1.1.2] - 06/07/2019
   - now clock on jadwal sholat more responsive on 5" display
   
-  #### [1.2.0] - 06/07/2019
+  #### [1.2.0] - 07/07/2019
   - change some layout
   - add new design 
   - fix layout error
