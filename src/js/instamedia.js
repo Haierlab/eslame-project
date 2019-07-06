@@ -1,4 +1,5 @@
 //request instagram Endpoints
+function ig() {
 var settings = {
           'cache': false,
           'dataType': "jsonp",
@@ -30,13 +31,34 @@ var settings = {
 
         })
       });
+}
 
+ig();
+media();
 
-  $('#media').html(`
-    <iframe src="https://snapwidget.com/embed/708194" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
-    <div style="font:10px/14px 'Roboto','Helvetica Neue',Arial,Helvetica,sans-serif;font-weight:400;width:100%;text-align:right"><a href="https://snapwidget.com/free-widget" style="color:#777;text-decoration:none;">SnapWidget · Free Widget</a></div>
-  `);
-
+function media() {
+  var url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=15005923577.3bc7ce5.5bbc8170f44f42c883d32bd3b2274ae8";
+  $.ajax({
+    url:url,type:'GET',dataType:'json', success:function(x){
+      console.log(x)
+      let z = x.data;
+      $.each(z, function (en, ig) {
+        $('#media').append(`<div class="card mx-auto mb-4 d-inline-block" style="width: 19rem;">
+        <img src="`+ig.images.low_resolution.url+`" class="card-img-top" alt="image" width = "300px" height="270px">
+        <div class="card-body">
+          <h6><i class="fa fa-heart"> `+ig.likes.count+` Like</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comment"> `+ig.comments.count+` Comment</i></h6>
+          <hr>
+          <h6>Caption:</h6>
+          <p class="card-text">`+ig.caption.text+`</p>
+        </div>
+        <div class="card-footer">
+          <a href="`+ig.link+`" class="btn btn-primary" target="_blank">Ke Postingan</a>
+        </div>
+      </div>`);
+      })
+    }
+  });
+}
  $(document).on('click', '#igmedia', function(e){ 
         e.preventDefault(); 
         var url = $(this).attr('href'); 
