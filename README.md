@@ -40,6 +40,11 @@ made by students of AMIKOM University of Yogyakarta Indonesia
   #### [1.1.2] - 06/07/2019
   - now clock on jadwal sholat more responsive on 5" display
   
+  #### [1.2.0] - 06/07/2019
+  - change some layout
+  - add new design 
+  - fix layout error
+  
 ## Built With
 **Framework & Library**
 * [JQuery (AJAX)](https://jquery.com/) - Framework
