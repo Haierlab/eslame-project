@@ -35,7 +35,7 @@ made by students of AMIKOM University of Yogyakarta Indonesia
   - add instagram endpoint on footer
   - add jquery clock plugin on jadwal sholat 
   - rebuild instamedia with @eslame.id instagram API
-  - fix lagging when open in smartphone 
+  - fix lagging when open in mobile phone
   
   #### [1.1.2] - 06/07/2019
   - now clock on jadwal sholat more responsive on 5" display
