@@ -423,7 +423,7 @@ width: 55%;
   padding: 40px;
 }
 .jumbotron ul li a{
-  font-size: 4vh;
+  font-size: 3.5vh;
 }
 
 @media(min-width: 320px){
