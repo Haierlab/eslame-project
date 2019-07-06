@@ -113,14 +113,6 @@ function detail() {
 //Digital Clock Plugin with jQuery CSS3 "http://www.alessioatzeni.com/blog/css3-digital-clock-with-jquery/"
 function time() {
 $(document).ready(function() {
-var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-
-var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-
-var newDate = new Date();
-newDate.setDate(newDate.getDate());
-$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
-
 setInterval( function() {
   var seconds = new Date().getSeconds();
   $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
@@ -140,8 +132,8 @@ setInterval( function() {
 function date() {
   //var get hari dan bulan
   var hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
-  var bulan = ['Januari', 'Februari', 'Maret', 'April', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-  //membuar variabel baru dengan mengambil hari, tanggal, bulan lokal
+  var bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+  //membuar variabel baru dengan mengambil hari, tanggal, bulan lokal (pada pc/mobile phone)
   var tanggal = new Date().getDate();
   var day = new Date().getDay();
   var month = new Date().getMonth();
@@ -151,7 +143,7 @@ function date() {
   var bulan = bulan[month];
   var tahun = (year < 1000) ? year + 1900 : year;
   //menginisialisasikan semua variabel diatas ke dalam 1 variabel yaitu gettanggal
-  var gettanggal = hari +', '+ tanggal +' '+bulan+' '+tahun+' ';
+  var gettanggal = hari +', '+ tanggal +' '+bulan+' '+tahun;
   //menampilkan tanggal ke html
   $('#date').html(gettanggal);
 }
@@ -255,27 +247,19 @@ $('div.btn-group').hover(function() {
               $('#mnavbar').removeClass('solid');
           }
         });
-  });
- 
-    $(document).on('click', '#sholat', function(e){ 
+      });$(document).on('click', '#sholat', function(e){ 
         e.preventDefault(); 
         var url = $(this).attr('href'); 
         window.open(url, 'http://bit.ly/linkjadwalsholatapi');
-    });
-
-    $(document).on('click', '#quran', function(e){ 
+    });$(document).on('click', '#quran', function(e){ 
         e.preventDefault(); 
         var url = $(this).attr('href'); 
         window.open(url, 'http://bit.ly/linkquranapi');
-    });
-
-    $(document).on('click', '#contactus', function(e){ 
+    });$(document).on('click', '#contactus', function(e){ 
         e.preventDefault(); 
         var url = $(this).attr('href'); 
         window.open(url, '_blank');
-    });
-
-     $(document).on('click', '#igmedia', function(e){ 
+    });$(document).on('click', '#igmedia', function(e){ 
         e.preventDefault(); 
         var url = $(this).attr('href'); 
         window.open(url, '_blank');
